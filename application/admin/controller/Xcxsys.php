@@ -24,6 +24,7 @@ class Xcxsys extends Base
 	public function index()
 	{
 		$param = input();
+		Db::table('mac_system_config')->where('group','commoncfg')->select();
 
 		return $this->fetch('admin@xcxsys/index');
 	}
